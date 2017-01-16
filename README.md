@@ -1,17 +1,33 @@
 WiringPi-Go
 ============
 
+> This library has been forked for experimental use / research by Alex Ellis. I'm looking to use this to port the Pimoroni Blinkt! library to Golang. If you'd like to help or are in a similar position (looking for a GPIO library for Golang) get in touch.
+
 Golang wrapped version of Gordon's Arduino-like WiringPi for the Raspberry Pi
+
+# Install Go
+
+If you don't have Go on the Pi, download it from: https://golang.org/dl/ and pick the armv6l edition.
+
+```
+sudo tar -xvf go1.7.4.linux-armv6l.tar.gz -C /usr/local/
+export GOPATH=$HOME/go
+```
+
+Create your first project under: `$HOME/go/src/github.com/youruser/yourrepo/`
 
 # Installation
 
-install WiringPi first
+Install WiringPi
 
 ```
-cd WiringPi\wiringPi
-sudo make install
+# sudo apt-get install -qy wiringpi
+```
 
-go get github.com/hugozhu/rpi
+Then get the library:
+
+```
+go get github.com/alexellis/rpi
 ```
 
 # GPIO numbering
@@ -45,7 +61,7 @@ more to read at: [http://hugozhu.myalert.info/2013/03/22/19-raspberry-pi-gpio-po
 package main
 
 import (
-    . "github.com/hugozhu/rpi"
+    . "github.com/alexellis/rpi"
 )
 
 func main() {
@@ -75,6 +91,5 @@ func main() {
 
 ```
 export GOPATH=`pwd`
-go install github.com/hugozhu/rpi 
-go run src/lcd.go 
+go install github.com/alexellis/rpi 
 ```
