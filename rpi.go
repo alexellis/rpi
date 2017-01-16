@@ -94,15 +94,15 @@ import "C"
 import "unsafe"
 
 import (
-	"github.com/rogpeppe/rog-go/tree/master/exp/callback"
+	"github.com/rogpeppe/rog-go/exp/callback"
 	"errors"
 	"fmt"
 	"sync"
 )
 
 const (
-	VERSION = "0.2"
-	AUTHOR  = "@hugozhu"
+	VERSION = "0.3"
+	AUTHOR  = "@alexellis"
 )
 
 var (
